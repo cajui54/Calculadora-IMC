@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC - Corpo em Ritimo</title>
+    <link rel="shortcut icon" href="imagens/undraw_running.png">
+    <meta name="description" content="Calculador de IMC">
+    <meta name="keyword" content="imc calculadora tabela saúde">
+    <meta name="author" content="Jackson Silva">
+   
+    <!--fonts-->
+    <!--font-family: 'Cabin', sans-serif;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    
+    <!--font-family: 'Lobster', cursive;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <!--font-family: 'Press Start 2P', cursive;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!--arquivos externo CSS-->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!--Icon font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    
+</head>
+<body>
+    <main>
+    <header class="header">
+        <input type="checkbox" id="header__btnMenu">
+        <label  for="header__btnMenu"class="lblMenu">
+                <div class="btnBar"></div>
+        </label>
+
+        <nav class="header__nav">
+            <ul class="header__menuUl">
+                <li class="optionMenu">
+                    <a href="#homeAncora">
+                         home
+                         <div class="nav__bar"></div>
+                    </a>
+                </li>
+                <li class="optionMenu">
+                    <a href="#formCalculadora">
+                        calculadora
+                        <div class="nav__bar"></div>
+                    </a>
+                </li>
+                <li class="optionMenu">
+                    <a href="#tabelaAncora">
+                        tabela
+                        <div class="nav__bar"></div>
+                    </a>
+                    
+                </li>
+                <li class="optionMenu">
+                    <a href="#info">
+                        informações
+                        <div class="nav__bar"></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__containerLogo">
+            <i class="fas fa-dumbbell"></i>
+            <h2 class="header__subtituloLogo">Corpo em Ritimo</h2>
+        </div>
+    </header>
+    
+    <div class="article__slideshow" id="homeAncora">
+        <div class="bgSlide"></div>
+        <img src="imagens/imgRun01.jpg" alt="homem correndo" class="slidePhotos">
+        
+        <img src="imagens/imgSw03.jpg" alt="homem nadando" class="slidePhotos">
+        <img src="imagens/imgFood04.jpg" alt="vegetais" class="slidePhotos">
+        <img src="imagens/imgbike02.jpg" alt="homem bicicleta" class="slidePhotos">
+    </div>
+
+    <article class="article-top">
+        <h1 class="articleTop__titulo"><abbr title="Índice de Massa Corpotal">IMC</abbr> - Índice de Massa Corporal </h1>
+        <p class="paragrafo">
+            Índice de massa corporal, é baseado em um calculo para definir o grau de obesidade de 
+            uma pessoa. IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela 
+            Organização Mundial da Saúde para calcular o peso ideal de cada pessoa. 
+            Abaixo uma calculadora de IMC para que você possa verificar seu índice de massa coporal.
+        </p>
+        <img src="imagens/undraw_goal.png" alt="logo da página">
+    </article>
+   
+    <form class="form" id="formCalculadora"> 
+
+        <fieldset class="field">
+
+            
+            <div class="group__input">
+                <label for="txtAltura" class="lbl-field">Altura:</label>
+                <div class="container__input">
+                    <input id="txtAltura" class="txt" type="number" placeholder="1,80m" >
+                    <i class="fas fa-level-up-alt"></i>
+                </div>
+            </div>
+
+            <div class="group__input">
+            <label for="txtPeso" class="lbl-field">Peso:</label>
+                <div class="container__input">
+                    
+                    <input id="txtPeso" class="txt" type="number" placeholder="60,80kg" >
+                    <i class="fas fa-weight"></i>
+                </div>
+            </div>
+            <div class="container__btn">
+                <button class="btn btnCalcular">calcular<i class="far fa-check-circle"></i></button>
+                <button class="btn btnCancelar">cancelar<i class="far fa-window-close"></i></button>
+            </div>
+        </fieldset>
+
+        <fieldset class="field" id="tabelaAncora">
+            <table class="field__tbl">
+                <caption class="tbl__legend">Tabela IMC</caption>
+                <thead>
+                    <tr>
+                        <th>IMC</th>
+                        <th>Classificação</th>
+                        <th>Obesidade(Grau)</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Fonte: OMS - Organização Mundial da Saúde</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr id="trAbaixo">
+                        <td>Menor que 18,5</td>
+                        <td>abaixo do ideal</td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr id="trNormal">
+                        <td>Entre 18,5 e 24,9</td>
+                        <td>Normal</td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr id="trSobrepeso">
+                        <td>Entre 25,0 e 29,9</td>
+                        <td>Sobrepeso</td>
+                        <td>I</td>
+                    </tr>
+
+                    <tr id="trObesidade">
+                        <td>Entre 30 e 39,9</td>
+                        <td>Obesidade</td>
+                        <td>II</td>
+                    </tr>
+
+                    <tr id="trObesidadeGrave">
+                        <td>Maior que 40</td>
+                        <td>Obesidade Grave</td>
+                        <td>III</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <dl class="field__resultado">
+                <dt>Resultado do seu IMC:</dt>
+                <dd>
+                    <label class="lbl-Resultado">Seu IMC:</label><span id="spnResultado">?</span>
+                    <a href="#formCalculadora" class="btnNovo"><i class="fas fa-plus-circle"></i></a>
+                </dd>
+            </dl>
+        </fieldset>
+    </form>
+    <!--Artigos-->
+    <section class="secaoArtigos" id="info">
+        <article class="secaoArtigos__article">
+            <i class="fas fa-info-circle"></i>
+        <h2 class="article__subtitulo">Sobre IMC</h2>
+            <p class="paragrafo">
+                IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial 
+                da Saúde para calcular o peso ideal de cada pessoa O índice é calculado da seguinte 
+                maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que 
+                o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9. O IMC é 
+                a relação entre peso e altura e o cálculo é feito de acordo com a 
+                fórmula: IMC = peso/ (altura x altura), devendo o peso estar em kg e a altura em metro,
+                 e o resultado é dado em kg/m2. Depois de obter o resultado, é verificado em que faixa 
+                 o resultado se encontra, podendo indicar:
+            </p>
+        </article>
+        <div class="paralax muscle"></div>
+        <article class="secaoArtigos__article">
+            <i class="fas fa-list"></i>
+            <h2 class="article__subtitulo">Índice Considerado Ideal</h2>
+            <p class="paragrafo">
+                Para adultos, um IMC entre 20 e 22 indica a quantidade ideal, saudável de gordura corporal, 
+                o que está associado com maior tempo de vida e menor incidência de doenças graves. Coincidentemente, 
+                essa relação é o que muitas pessoas consideram ser o mais esteticamente atraente. Entretanto, 
+                é importante ressaltar que um índice entre 22 e 25 também é considerado um intervalo bastante 
+                aceitável, pois está igualmente associado à boa saúde Pesquisas recentes apontaram que um IMC 
+                entre 23 e 25 é considerado o que garante taxas de sobrevivência mais longas aos indivíduos. 
+            </p>
+        </article>
+        <div class="paralax bike"></div>
+        <article class="secaoArtigos__article">
+            <i class="fab fa-leanpub"></i>
+            <h2 class="article__subtitulo">Limitações do IMC</h2>
+            <p class="paragrafo">
+                Há alguns problemas em usar o IMC para determinar se uma pessoa está acima do peso. Por exemplo, pessoas musculosas podem ter um Índice de Massa Corporal alto e não serem gordas. O IMC também não é aplicável para crianças, sendo que precisa de gráficos específicos. Além disso, não é aplicável para idosos, para os quais se aplica classificação diferenciada.
+
+                Ou seja, podemos usar o IMC com algumas ressalvas, exceto para pessoas que praticam musculação, onde o cálculo de percentual de gordura é muito mais condizente com a realidade
+
+                Para crianças e adolescentes de até 15 anos a fórmula do IMC continua sendo a mesma, só os valores de referência são diferenciados. O IMC é o valor de massa corporal, que as diferenças raciais e étnicas têm sobre o Índice de Massa Corporal. Por exemplo, um grupo de assessoramento à Organização Mundial de Saúde concluiu que pessoas de origem asiática poderiam ser consideradas acima do peso com um IMC de apenas 25
+            </p>
+        </article>
+    </section>
+    <div class="paralax swim"></div>
+
+    <section class="secaoArtigos">
+        <article class="secaoArtigos__article">
+            <h2 class="article__subtitulo">Melhor forma de combater a obsidade é praticando um esporte de sua preferência:</h2>
+            <p class="paragrafo">
+                Escolher qual é o melhor exercício para você depende do seu estilo de vida, objetivos e preferências pessoais.
+            </p>
+               
+            <p class="paragrafo">
+                A primeira coisa a considerar é o que é mais prático para ser encaixado na sua rotina. Você pode chegar facilmente a uma academia ou a um centro esportivo? Caso a resposta seja sim, os exercícios na academia e esportes em equipe podem se encaixar bem no seu dia a dia.
+            </p>
+
+            <p class="paragrafo">
+                Sabemos que muitos de vocês gostam de treinar logo pela manhã, antes de começar o dia de trabalho e afazeres. Procure por academias e centros de esportes 24h ou que abram bem cedinho. Mas, se você mora ou trabalha longe desses lugares, não se preocupe: há muitos exercícios que você pode fazer em casa ou no parque.
+            </p>
+
+            <p class="paragrafo">
+                Pense no que você deseja obter com os treinos. Você está se esforçando por um objetivo físico específico? Quer conhecer outros atletas e fazer novos amigos? Nesse caso, algum tipo de esporte de equipe pode ser ótimo para você.
+            </p>
+        </article>
+    </section>
+
+    <section class="secaoInfo">
+        <img class="secaoInfo__img" src="imagens/training-828741_1920.jpg" alt="mulher fitness">
+        <h2 class="secaoInfo__subtitulo">TIPOS DE ATIVIDADES FÍSICAS</h2>
+        
+    </section>
+
+    <section class="sectionArtigos">
+   
+
+        <article class="sectionArtigos__article">
+            <img class="article__img" src="imagens/fitness.jpg" alt="equipamento de musulação">
+            <div class="group">
+                <h2 class="sectionArtigos__subtitulo"> TREINAMENTO DE PESO</h2>
+                <p class="sectionArtigos__paragrafo">Qualquer que seja o seu esporte preferido, alguma forma de treinamento com pesos é benéfica para exercitar os músculos. O mais importante é aprender a forma correta para qualquer levantamento de peso, para evitar o risco de lesões.</p>
+                <p class="sectionArtigos__paragrafo">Se você não é do tipo que quer ir para a sala de musculação da academia, pode treinar em casa apenas utilizando o seu peso corporal ou alguns pesos livres.O bom da maioria das academias e clubes é que geralmente possuem instrutores ou treinadores. Desse modo, você poderá obter orientações desses profissionais que podem, inclusive, definir um plano de treinos para você com base nos seus objetivos.</p>
+            </div>
+        </article>
+
+        <article class="sectionArtigos__article">
+            <img class="article__img" src="imagens/imgRun01.jpg" alt="homen correndo">
+            <div class="group">
+                <h2 class="sectionArtigos__subtitulo"> CORRIDAS</h2>
+                <p class="sectionArtigos__paragrafo">Seja em uma esteira, na pista ou nas práticas cross-country, correr é um esporte de resistência que não exige muito investimento financeiro para ser realizada. Se você quer ampliar o seu círculo social e fazer amigos entre uma corrida e outra, pode considerar fazer parte de uma assessoria de corrida.</p>
+                <p class="sectionArtigos__paragrafo">Mas, se a grana está curta e/ou você não liga muito para o social, você pode simplesmente sair por aí por conta própria, tomando cuidado para não pegar mais pesado do que você está acostumado e arejar a mente enquanto corre. Esteja você treinando para uma maratona ou correndo apenas 5 km no parque perto da sua casa, a corrida regular tem muitos benefícios.</p>
+                <p class="sectionArtigos__paragrafo">Se você ama a natureza, por que não tentar também correr em trilhas? Este tipo de corrida é feito ao ar livre, no meio do mato, cercado de paisagens lindas. O nível de dificuldade vai depender da trilha que escolher — tipo de terreno e comprimento dela. Essa opção pode ser um desafio e tanto!</p>
+            </div>
+        </article>
+
+        <article class="sectionArtigos__article">
+            <img class="article__img" src="imagens/imgSw03.jpg" alt="equipamento de musulação">
+            <div class="group">
+                <h2 class="sectionArtigos__subtitulo"> Natação</h2>
+                <p class="sectionArtigos__paragrafo">
+                    Natação é aquele tipo de esporte que reúne pessoas de diversas idades. A atividade não
+                    tem muito impacto, assim até crianças, grávidas e indivídous com problema nas articulações costuma a práticar natação.
+                </p>
+                <p class="sectionArtigos__paragrafo">Os benefícios de praticar natação são muitos. E ela é considerada um
+                    dos esportes mais completos de todos, já que trabalha a função cardiorrespiratória, enquanto treina vários grupos
+                    musculares.
+                </p>
+                <p class="sectionArtigos__paragrafo">Os benefícios de praticar natação são muitos. E ela é considerada um
+                    dos esportes mais completos de todos, já que trabalha a função cardiorrespiratória, enquanto treina vários grupos
+                    musculares.
+                </p>
+
+            </div>
+        </article>
+
+    </section>
+
+    <footer class="rodape">
+        <ul class="rodape__iconContact">
+            <li><a href="https://www.linkedin.com/in/jackson-silva-50641b184/"><i class="fab fa-linkedin"></i>  Contact me</a></li>
+        </ul>
+    </footer>
+    </main>
+    <script type="text/javascript" src="js/main.js" defer></script>
+    <script src="js/efeitos.js"></script>
+</body>
+</html>
